@@ -1,34 +1,10 @@
 import Navbar from "./components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-950 text-white">
-      {/* Navegação */}
-      <header className="border-b border-white/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <a href="/" className="text-2xl font-bold tracking-tight">
-            camada<span className="text-orange-500">.</span>
-          </a>
-
-          <nav className="hidden items-center gap-4 text-sm text-zinc-400 sm:flex">
-            <Navbar />
-            <a href="#recursos" className="transition hover:text-white">
-              Recursos
-            </a>
-            <a href="#sobre" className="transition hover:text-white">
-              Sobre
-            </a>
-          </nav>
-
-          <a
-            href="#calculadora"
-            className="rounded-full bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-400"
-          >
-            Começar agora
-          </a>
-        </div>
-      </header>
-
+      <Navbar></Navbar>
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute left-1/2 top-10 h-80 w-80 -translate-x-1/2 rounded-full bg-orange-500/10 blur-3xl" />
@@ -51,12 +27,12 @@ export default function Home() {
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#calculadora"
+              <Link
+                href="/calc_price"
                 className="rounded-xl bg-orange-500 px-7 py-4 text-center font-semibold text-white transition hover:bg-orange-400"
               >
                 Calcular meu preço →
-              </a>
+              </Link>
 
               <a
                 href="#recursos"
@@ -183,12 +159,12 @@ export default function Home() {
             Organize seus custos e tenha mais segurança para transformar sua
             impressora 3D em um negócio rentável.
           </p>
-          <a
-            href="#calculadora"
+          <Link
+            href="/calc_price"
             className="mt-8 inline-flex rounded-xl bg-orange-500 px-7 py-4 font-semibold transition hover:bg-orange-400"
           >
             Quero calcular meus preços →
-          </a>
+          </Link>
         </div>
       </section>
 
