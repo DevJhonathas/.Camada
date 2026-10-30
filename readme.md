@@ -225,12 +225,6 @@ Não trate o histórico local como backup permanente. Antes de trocar de navegad
 
 A aplicação pode ser publicada em uma plataforma que ofereça suporte ao Next.js. Para uma publicação convencional, confira as configurações e variáveis do ambiente na plataforma escolhida.
 
-### GitHub Pages
-
-O GitHub Pages hospeda arquivos estáticos. Para publicar esta aplicação nele, o projeto precisa estar configurado para exportação estática do Next.js (por exemplo, com `output: 'export'` em `next.config.ts`) e o workflow do GitHub Actions deve publicar o diretório gerado (`out`). Se o repositório for publicado em um subcaminho, como `usuario.github.io/nome-do-repositorio`, a configuração de `basePath` também precisa corresponder ao nome do repositório.
-
-Esses ajustes dependem do conteúdo de `next.config.ts` e do workflow de deploy, que não são definidos pelo `package.json` nem pelo componente do formulário. Portanto, confirme esses arquivos antes de considerar a publicação no GitHub Pages concluída.
-
 ## Desenvolvimento
 
 A lógica principal de cálculo está centralizada na função `calculatePrice`, que recebe os valores do formulário e o estado da opção Action Figure, e retorna os custos parciais, custo de produção, preço sugerido, lucro, margem efetiva, avisos e erros.
