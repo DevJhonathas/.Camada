@@ -46,7 +46,7 @@ npm --version
 Clone o repositório e entre na pasta do projeto:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/DevJhonathas/.Camada.git
 cd <PASTA_DO_PROJETO>
 ```
 
