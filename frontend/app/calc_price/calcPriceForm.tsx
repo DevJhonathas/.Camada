@@ -49,8 +49,6 @@ type SavedDraft = {
   error: boolean;
 };
 
-// Detecta quando a renderização já está no navegador sem causar divergência
-// entre o HTML do servidor e a primeira renderização de hidratação.
 function subscribeToClient() {
   return () => {};
 }
@@ -186,8 +184,6 @@ function calculatePrice(values: FormValues, isActionFigure: boolean): Calculatio
   let warning: string | null = null;
 
   if (lifetimeMonths > 0 && monthlyUsageHours > 0) {
-    // Distribui o valor da impressora e a reserva mensal de manutenção
-    // pelas horas estimadas de uso durante a vida útil.
     depreciationCost =
       (printerValue / (lifetimeMonths * monthlyUsageHours)) * printHours;
     maintenanceCost = (monthlyMaintenance / monthlyUsageHours) * printHours;
@@ -271,8 +267,7 @@ function calculatePrice(values: FormValues, isActionFigure: boolean): Calculatio
     };
   }
 
-  // A margem desejada é calculada sobre o preço de venda, não como acréscimo
-  // simples sobre o custo. Taxas e impostos também incidem sobre esse preço.
+
   const suggestedPrice = productionCost / remainingShare;
   const platformFee = suggestedPrice * (platformRate / 100);
   const taxCost = suggestedPrice * (taxRate / 100);
@@ -407,8 +402,6 @@ export default function CalcPriceForm({ historySlot }: { historySlot?: ReactNode
     [isClient],
   );
 
-  // Os valores editados prevalecem sobre os dados recuperados do navegador.
-  // Assim, não precisamos chamar setState dentro de um efeito.
   const [editedValues, setEditedValues] = useState<FormValues | null>(null);
   const [editedIsActionFigure, setEditedIsActionFigure] = useState<boolean | null>(null);
   const [editedProductName, setEditedProductName] = useState<string | null>(null);
@@ -527,8 +520,6 @@ export default function CalcPriceForm({ historySlot }: { historySlot?: ReactNode
     persistValues(nextValues, false, INITIAL_PRODUCT_NAME);
   }
 
-  // O histórico envia o preset selecionado por um evento do navegador.
-  // Atualizações de estado ocorrem no callback do evento, não no corpo do efeito.
   useEffect(() => {
     function handleLoadPreset(event: Event) {
       const detail = (event as CustomEvent<PresetLoadDetail>).detail;
