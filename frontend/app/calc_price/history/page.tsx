@@ -12,12 +12,7 @@ export default function CalcPriceHistoryPage() {
   return (
     <main className="min-h-screen bg-zinc-950 text-fg">
       <header className="border-b border-border">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-6 py-5">
-          <Link href="/" className="text-2xl font-bold tracking-tight">
-            camada<span className="text-primary">.</span>
-          </Link>
-          <Navbar />
-        </div>
+        <Navbar />
       </header>
 
       <div className="mx-auto max-w-5xl px-6 py-10 md:py-14">
