@@ -32,13 +32,13 @@ O projeto utiliza componentes React no cliente para interatividade e armazenamen
 ## Requisitos
 
 - Node.js em uma versão compatível com Next.js 16.
-- npm.
+- yarn.
 
 Confira as versões instaladas:
 
 ```bash
 node --version
-npm --version
+yarn --version
 ```
 
 ## Instalação e execução
@@ -53,13 +53,13 @@ cd <PASTA_DO_PROJETO>
 Instale as dependências:
 
 ```bash
-npm install
+yarn install
 ```
 
 Inicie o servidor de desenvolvimento:
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 Acesse [http://localhost:3000](http://localhost:3000) no navegador.
@@ -68,16 +68,16 @@ Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
 | Comando | Descrição |
 | --- | --- |
-| `npm run dev` | Inicia o servidor de desenvolvimento do Next.js. |
-| `npm run build` | Gera a build de produção. |
-| `npm run start` | Inicia a aplicação usando a build de produção já gerada. |
-| `npm run lint` | Executa o ESLint. |
+| `yarn run dev` | Inicia o servidor de desenvolvimento do Next.js. |
+| `yarn run build` | Gera a build de produção. |
+| `yarn run start` | Inicia a aplicação usando a build de produção já gerada. |
+| `yarn run lint` | Executa o ESLint. |
 
 Para testar a build de produção localmente:
 
 ```bash
-npm run build
-npm run start
+yarn run build
+yarn run start
 ```
 
 ## Como os custos são calculados
