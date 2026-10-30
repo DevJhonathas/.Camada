@@ -843,7 +843,7 @@ export default function CalcPriceForm({ historySlot }: { historySlot?: ReactNode
           </div>
         </section>
 
-        <div className="rounded-2xl border border-border bg-surface p-5 sm:p-6">
+        <div className="rounded-2xl border border-white/10 bg-zinc-900/80 p-5 sm:p-6">
           <button
             type="submit"
             className="flex w-full items-center justify-center gap-3 rounded-xl bg-primary px-6 py-4 font-semibold text-primary-fg transition hover:brightness-110"
