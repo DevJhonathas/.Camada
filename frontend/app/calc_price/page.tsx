@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function CalcPricePage() {
   return (
-    <main className="min-h-screen bg-bg text-fg">
+    <main className="min-h-screen bg-zinc-950 text-fg">
       <header className="border-b border-border">
           <Navbar />
       </header>
