@@ -137,8 +137,6 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
   const [searchName, setSearchName] = useState("");
   const [sort, setSort] = useState<SortOption>("recent");
 
-  // A prévia da calculadora sempre mostra os três registros mais recentes.
-  // Na página completa, o mesmo componente oferece busca e ordenação.
   const recentHistory = useMemo(() => sortEntries(history, "recent"), [history]);
   const filteredHistory = useMemo(() => {
     const query = searchName.trim().toLocaleLowerCase("pt-BR");
@@ -156,8 +154,6 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
       isActionFigure: entry.isActionFigure,
     };
 
-    // O rascunho também é gravado para que a página da calculadora possa
-    // restaurar o preset quando o usuário o carrega pela página de histórico.
     try {
       window.localStorage.setItem(
         DRAFT_STORAGE_KEY,
@@ -168,7 +164,7 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
         }),
       );
     } catch {
-      // O evento ainda permite carregar os dados quando a calculadora já está montada.
+
     }
 
     if (view === "all") {
@@ -189,7 +185,7 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
       window.localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(nextHistory));
       notifyHistoryChanged();
     } catch {
-      // Se o navegador bloquear o armazenamento, o histórico anterior é preservado.
+
     }
   }
 
@@ -199,7 +195,7 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
       window.localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(nextHistory));
       notifyHistoryChanged();
     } catch {
-      // Se o navegador bloquear o armazenamento, o histórico anterior é preservado.
+
     }
   }
 
@@ -208,7 +204,7 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
       window.localStorage.setItem(HISTORY_STORAGE_KEY, "[]");
       notifyHistoryChanged();
     } catch {
-      // Se o navegador bloquear o armazenamento, o histórico anterior é preservado.
+
     }
   }
 
