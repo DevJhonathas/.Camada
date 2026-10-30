@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import CalcPriceForm from "./calcPriceForm";
-import CalcPriceHistory from "./calcPriceHistory";
+import CalcPriceHistory from "./CalcPriceHistory";
 
 export const metadata = {
   title: "Calcular preço | Camada",
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function CalcPricePage() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-fg">
+    <main className="min-h-screen bg-bg text-fg">
       <header className="border-b border-border">
           <Navbar />
       </header>
