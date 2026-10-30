@@ -15,7 +15,6 @@ export default function Navbar() {
     <header className="border-b border-white/10">
       <div className="mx-auto max-w-7xl px-6 py-5">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link
             href="/"
             onClick={closeMenu}
@@ -23,8 +22,6 @@ export default function Navbar() {
           >
             camada<span className="text-orange-500">.</span>
           </Link>
-
-          {/* Navegação para desktop */}
           <nav className="hidden items-center gap-8 text-sm text-zinc-400 sm:flex">
             <Link href="/" className="transition hover:text-white">
               Início
@@ -59,7 +56,6 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Botão hambúrguer para celular */}
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
@@ -69,7 +65,6 @@ export default function Navbar() {
             className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 text-white transition hover:bg-white/5 sm:hidden"
           >
             {menuOpen ? (
-              /* Ícone X */
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -86,7 +81,6 @@ export default function Navbar() {
                 <path d="m6 6 12 12" />
               </svg>
             ) : (
-              /* Ícone hambúrguer */
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -107,7 +101,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Menu expandido para celular */}
         {menuOpen && (
           <nav
             id="mobile-navigation"
