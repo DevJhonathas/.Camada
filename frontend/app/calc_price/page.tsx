@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import CalcPriceForm from "./calcPriceForm";
-import CalcPriceHistory from "./CalcPriceHistory";
+import CalcPriceHistory from "./calcPriceHistory";
 
 export const metadata = {
   title: "Calcular preço | Camada",

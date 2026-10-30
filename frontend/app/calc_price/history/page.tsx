@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
-import CalcPriceHistory from "../CalcPriceHistory";
+import CalcPriceHistory from "../calcPriceHistory";
 
 export const metadata = {
   title: "Histórico de preços | Camada",
