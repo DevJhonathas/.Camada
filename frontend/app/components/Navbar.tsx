@@ -35,7 +35,7 @@ export default function Navbar() {
             </Link>
 
             <a
-              href="/#recursos"
+              href=".Camada/#recursos"
               className="transition hover:text-white"
             >
               Recursos
