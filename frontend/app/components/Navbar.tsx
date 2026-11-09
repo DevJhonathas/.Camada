@@ -34,12 +34,12 @@ export default function Navbar() {
               Calcular preço
             </Link>
 
-            <Link
+            <a
               href="/#recursos"
               className="transition hover:text-white"
             >
               Recursos
-            </Link>
+            </a>
 
             {/*<Link
               href="/#sobre"
