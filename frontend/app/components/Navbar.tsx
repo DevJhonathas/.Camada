@@ -34,12 +34,12 @@ export default function Navbar() {
               Calcular preço
             </Link>
 
-            <a
-              href="#recursos"
+            <Link
+              href="/#recursos"
               className="transition hover:text-white"
             >
               Recursos
-            </a>
+            </Link>
 
             {/*<Link
               href="/#sobre"
@@ -122,13 +122,13 @@ export default function Navbar() {
               Calcular preço
             </Link>
 
-            <Link
+            {/*<Link
               href="/#recursos"
               onClick={closeMenu}
               className="rounded-xl px-4 py-3 text-sm text-zinc-300 transition hover:bg-white/5 hover:text-white"
             >
               Recursos
-            </Link>
+            </Link> */}
 
             <Link
               href="/#sobre"
