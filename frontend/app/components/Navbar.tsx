@@ -41,12 +41,12 @@ export default function Navbar() {
               Recursos
             </Link>
 
-            <Link
+            {/*<Link
               href="/#sobre"
               className="transition hover:text-white"
             >
               Sobre
-            </Link>
+            </Link> */}
 
             <Link
               href="/calc_price"
