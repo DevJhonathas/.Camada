@@ -5,6 +5,11 @@ Aplicação web para estimar o custo de produção, o preço de venda sugerido e
 A aplicação também permite salvar cálculos no histórico, reutilizar configurações como presets e manter um rascunho dos dados no navegador.
 
 > **Aplicação online:** [Abrir o .Camada](https://devjhonathas.github.io/.Camada/)
+
+<p align="center">
+    <img width="85%" alt="camada" src="https://github.com/user-attachments/assets/00fd9c29-3d25-4a0f-bcdc-84f7dca8165c" />
+</p>
+
 ## Funcionalidades
 
 - **Cálculo de filamento:** considera o peso da peça, o peso do rolo, o preço do rolo e uma porcentagem estimada de desperdício.
