@@ -28,8 +28,11 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: frontend/package-lock.json
+          cache: yarn
+          cache-dependency-path: frontend/yarn.lock   
+
+      - name: Habilitar Yarn
+        run: corepack enable
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
@@ -38,9 +41,17 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Instalar dependências
+        working-directory: frontend
+        run: yarn install --frozen-lockfile
+
       - name: Compilar o Next.js
         working-directory: frontend
-        run: npm run build
+        env:
+          NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ vars.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
+          NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${{ vars.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}
+          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ vars.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
+        run: yarn build
         
       - name: Verificar arquivos CSS
         working-directory: frontend
