@@ -350,7 +350,7 @@ function Field({
           min={min}
           max={max}
           required={required}
-          className={`w-full rounded-xl border border-border bg-bg py-3 text-sm text-fg outline-none transition placeholder:text-muted/60 focus:border-primary focus:ring-2 focus:ring-primary/20 ${
+          className={`w-full rounded-xl border border-white/10 bg-zinc-950/70 py-3 text-sm text-fg outline-none transition placeholder:text-muted/60 focus:border-primary focus:ring-2 focus:ring-primary/20 ${
             prefix ? "pl-12" : "pl-4"
           } ${suffix ? "pr-14" : "pr-4"}`}
         />
@@ -726,7 +726,7 @@ export default function CalcPriceForm({ historySlot }: { historySlot?: ReactNode
             className={`flex cursor-pointer items-start gap-4 rounded-2xl border p-5 transition ${
               isActionFigure
                 ? "border-primary/50 bg-primary/10"
-                : "border-border bg-bg hover:border-primary/30"
+                : "border-white/10 bg-bg hover:border-primary/30"
             }`}
           >
             <input
@@ -763,7 +763,7 @@ export default function CalcPriceForm({ historySlot }: { historySlot?: ReactNode
                 </p>
               </div>
 
-              <div className="border-t border-border pt-6">
+              <div className="border-t border-white/10 pt-6">
                 <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-primary">
                   Tempo de trabalho
                 </h3>

@@ -12,6 +12,8 @@ import {
   type PresetLoadDetail,
 } from "./calcPriceStorage";
 
+import Downloads from "../components/Download";
+
 type HistoryView = "recent" | "all";
 type SortOption =
   | "recent"
@@ -226,6 +228,11 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
           {history.length} {history.length === 1 ? "registro" : "registros"}
         </span>
       </div>
+      {history.length > 0 && (
+        <div className="mt-5">
+          <Downloads entries={history} variant="toolbar" />
+        </div>
+      )}
 
       {view === "all" && history.length > 0 && (
         <div className="mt-5 grid gap-3 sm:grid-cols-[minmax(0,1fr)_minmax(220px,0.65fr)]">
@@ -341,6 +348,14 @@ export default function CalcPriceHistory({ view = "recent" }: { view?: HistoryVi
                 <p className="mt-3 px-1 text-xs text-muted">
                   Margem sobre a venda: <span className="font-semibold text-emerald-400">{percent(entry.calculation.actualMargin)}</span>
                 </p>
+
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4">
+                  <p className="text-xs text-muted">
+                    Exportar este cálculo
+                  </p>
+
+                  <Downloads entries={[entry]} variant="inline" />
+                </div>
 
                 <button
                   type="button"

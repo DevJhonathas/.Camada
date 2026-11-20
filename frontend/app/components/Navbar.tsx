@@ -22,16 +22,17 @@ export default function Navbar() {
           >
             camada<span className="text-orange-500">.</span>
           </Link>
+
           <nav className="hidden items-center gap-8 text-sm text-zinc-400 sm:flex">
             <Link href="/" className="transition hover:text-white">
               Início
             </Link>
 
             <Link
-              href="/calc_price"
+              href="/calc_price/history/"
               className="transition hover:text-white"
             >
-              Calcular preço
+              Histórico
             </Link>
 
             <Link
@@ -42,10 +43,10 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/#sobre"
+              href="/feedback"
               className="transition hover:text-white"
             >
-              Sobre
+              Feedback
             </Link>
 
             <Link
@@ -115,11 +116,11 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/calc_price"
+              href="/calc_price/history/"
               onClick={closeMenu}
               className="rounded-xl px-4 py-3 text-sm text-zinc-300 transition hover:bg-white/5 hover:text-white"
             >
-              Calcular preço
+              Histórico
             </Link>
 
             <Link
@@ -131,11 +132,11 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/#sobre"
+              href="/feedback"
               onClick={closeMenu}
               className="rounded-xl px-4 py-3 text-sm text-zinc-300 transition hover:bg-white/5 hover:text-white"
             >
-              Sobre
+              Feedback
             </Link>
 
             <Link
