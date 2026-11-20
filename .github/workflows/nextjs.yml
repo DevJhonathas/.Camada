@@ -39,7 +39,7 @@ jobs:
 
       - name: Instalar dependências
         working-directory: frontend
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Instalar dependências
         working-directory: frontend
